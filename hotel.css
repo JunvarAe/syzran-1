@@ -21,18 +21,6 @@
 .groups{
     padding: 4rem 0;
 }
-/* .items{
-    width: 100%;
-    display: grid;
-    gap: 4rem;
-    overflow: auto;
-}
-.item{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-bottom: solid 3px #00000010;
-} */
 .img_item{
     background: url(assets/teatr.jpg);
     height: 20rem;
@@ -70,15 +58,15 @@
 .like{
     font-size: 28px;
 }
-/*.num{
-    font-size: 24px;
-    color: #112f91;
-    font-weight: 600;
-}/*
-.price{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}*/
-
-
+.ui .content{
+    position: relative;
+}
+.ui .content .score{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.7rem;
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #22922a;
+}
