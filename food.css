@@ -80,4 +80,16 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
+.ui .content{
+    position: relative;
+}
+.ui .content .score{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem;
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #22922a;
+    font-size: 14px;
+}
