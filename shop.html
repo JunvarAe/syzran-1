@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css"
+        rel="stylesheet" type="text/css" />
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <title>Сызрань</title>
+</head>
+
+<body>
+    <header>
+        <ul class="head_menu">
+            <!-- <li class="item_menu">Достопримечательности</li> -->
+            <li class="item_menu"><a href="afisha.html">Афиша</a></li>
+            <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+            <li class="item_menu"><a href="food.html">Еда</a></li>
+            <li class="item_menu"><a href="shop.html">Магазины</a></li>
+            <li class="item_menu"><a href="entertaiment.html">Развлечения</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="today_action">
+
+        </div>
+
+        <div class="filter width_adaptive">
+            <div class="ui form">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Поиск...">
+                </div>
+                <!-- 
+                <div class="ui dropdown">
+                    <div class="default text">Выберете область</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                      <div class="item"></div>
+                      <div class="item">Театр</div>
+                      <div class="item">Выставки</div>
+                    </div>
+                </div> -->
+
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui calendar" id="rangestart">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="Start">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui calendar" id="rangeend">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="End">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="ui button active">Применить</button>
+            </div>
+
+        </div>
+
+        <div class="groups">
+            <div class="group width_adaptive">
+                <div class="ui link cards">
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/1.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Магнит</div>
+                            <div class="description">
+                                <p>Магнит из бересты резной с золотом "Храм" Сызрань</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                50 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/3.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Набор</div>
+                            <div class="description">
+                                <p>Сувенирный набор из Сызрани</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                800 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/4.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Визитница</div>
+                            <div class="description">
+                                <p>Визитница "Казанский собор" Сызрань</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                200 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/5.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Магнит</div>
+                            <div class="description">
+                                <p>Магнит Из Бересты Резной C Золотом "Герб" Сызрань</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                90 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/6.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Брелок</div>
+                            <div class="description">
+                                <p>Брелок для ключей с символикой Сызрани</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                40 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/7.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Магнит</div>
+                            <div class="description">
+                                <p>Магнит-панорама с золотистой рамкой</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                70 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="assets/shop/8.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Вымпел</div>
+                            <div class="description">
+                                <p>Вымпел размеры: А5, А6</p>
+                            </div>
+                        </div>
+                        <div class="extra  content">
+                            <span class="right floated">
+                                от 100 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                                75
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class_footer width_adaptive">
+            <div class="column">
+                <div class="caption_column column_footer_item">Главная</div>
+
+                <ul>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="caption_column">Меню</div>
+
+                <ul>
+                    <li class="column_footer_item">Афиша</li>
+                    <li class="column_footer_item">Гостиницы</li>
+                    <li class="column_footer_item">Еда</li>
+                    <li class="column_footer_item">Магазины</li>
+                    <li class="column_footer_item">Развлечения</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="caption_column">Информация</div>
+
+                <ul>
+                    <li class="column_footer_item">О проекте</li>
+                    <li class="column_footer_item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    $('.ui.dropdown')
+        .dropdown({
+            allowAdditions: true
+        })
+    $('#rangestart').calendar({
+        type: 'date',
+        endCalendar: $('#rangeend')
+    });
+    $('#rangeend').calendar({
+        type: 'date',
+        startCalendar: $('#rangestart')
+    });
+</script>
+
+</html>

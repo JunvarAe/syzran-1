@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css"
+        rel="stylesheet" type="text/css" />
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hotel.css">
+    <title>Сызрань</title>
+</head>
+
+<body>
+    <header>
+        <ul class="head_menu">
+            <li class="item_menu"><a href="afisha.html">Афиша</a></li>
+            <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+            <li class="item_menu"><a href="food.html">Еда</a></li>
+            <li class="item_menu"><a href="shop.html">Магазины</a></li>
+            <li class="item_menu"><a href="entertaiment.html">Развлечения</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="carusel">
+            <div class="img_content">
+                <div class="img photo_1"></div>
+                <div class="img photo_2"></div>
+                <div class="img photo_3"></div>
+            </div>
+            <div class="des_field">
+                <div class="caption_carusel width_adaptive">Заголовок</div>
+                <div class="description_carusel width_adaptive">Описание для картики, которая сейчас на экрае</div>
+            </div>
+
+            <div class="switch">
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+            </div>
+        </div>
+        <div class="today_action">
+
+        </div>
+
+        <div class="filter width_adaptive">
+            <div class="ui form">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Поиск...">
+                </div>
+                <!-- 
+                <div class="ui dropdown">
+                    <div class="default text">Выберете область</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                      <div class="item"></div>
+                      <div class="item">Театр</div>
+                      <div class="item">Выставки</div>
+                    </div>
+                </div> -->
+
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui calendar" id="rangestart">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="Start">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui calendar" id="rangeend">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="End">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="ui button active">Применить</button>
+            </div>
+
+        </div>
+
+        <div class="groups">
+            <div class="group width_adaptive">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/1.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Гостиница "Сызрань"</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <!-- <span class="stay">1 Month</span> -->
+                            </div>
+                            <div class="description">
+                                <p>Отель «Гараж» расположен в Сызрани. На территории отеля обустроена бесплатная частная
+                                    парковка. Каждое утро в отеле сервируют завтрак с выбором блюд из меню.</p>
+                                <p>Отличная гостиница, для отдыха! Удивила столовая 90 годов, а в целом кухня хорошая,
+                                    есть выбор блюд, салатов и напитков. Номера чистые, претензий нет. Стоянка
+                                    автотранспорта очень большая, для водителей есть все удобства.</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бассейн</div>
+                                <div class="ui label">Бесплатная парковка</div>
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/2.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Гостиница Гараж</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <span class="stay">2 Weeks</span>
+                            </div>
+                            <div class="description">
+                                <p>Отель «Гараж» расположен в Сызрани. На территории отеля обустроена бесплатная частная
+                                    парковка. Каждое утро в отеле сервируют завтрак с выбором блюд из меню. Отличная
+                                    гостиница, для отдыха! Удивила столовая 90 годов, а в целом кухня хорошая, есть
+                                    выбор блюд, салатов и напитков. Номера чистые, претензий нет. Стоянка автотранспорта
+                                    очень большая, для водителей есть все</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бесплатная парковка</div>
+                                <div class="ui label">Можно с питомцами</div>
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <br>
+                                <div class="ui label">Кофеварка/чайник во всех номерах</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/3.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Гостиничный комплекс Каскад</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <span class="stay">6 Weeks</span>
+                            </div>
+                            <div class="description">
+                                <p>Четырехзвездочный отель «Каскад» расположен на берегу реки Волга в городе Сызрань.
+                                    При отеле работает бар и ресторан. К услугам гостей круглосуточная стойка
+                                    регистрации и фитнес-центр со спа-зоной. Everything was just good as good was price!
+                                </p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бассейн</div>
+                                <div class="ui label">Бесплатная парковка</div>
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <br>
+                                <div class="ui label">Кофеварка/чайник во всех номерах</div>
+                                <div class="ui label">Бар</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/4.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Hotel Apriori</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <span class="stay">6 Weeks</span>
+                            </div>
+                            <div class="description">
+                                <p>Отель «Априори» расположен в Сызрани. К услугам гостей ресторан, круглосуточная
+                                    стойка регистрации и бесплатный Wi-Fi. Осуществляется доставка еды и напитков в
+                                    номер. Понравилось все, завтрак был в номер, все вкусно Ещё на ресепшене работает
+                                    девушка Надежда, ей особая благодарность за помощь, так как мы приехали поздно, а у
+                                    меня была жуткая аллергия, постаралась найти лекарство для меня</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бесплатная парковка</div>
+                                <div class="ui label">Можно с питомцами</div>
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/5.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">U Kremlya</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <span class="stay">6 Weeks</span>
+                            </div>
+                            <div class="description">
+                                <p>Отель «У Кремля» расположен в Сызрани. При отеле работает бар. К услугам гостей
+                                    круглосуточная стойка регистрации и ресторан. Осуществляется доставка еды и напитков
+                                    в номер. Чудесная и чистая гостиница, персонал очень приветливый, всегда помогут и
+                                    подскажут. В номере все есть. На этаже есть кухня с водой, чайником и посудой.
+                                    Чистое новое белье.</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бесплатная парковка</div>
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <div class="ui label">Бар</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui large image">
+                            <img src="assets/hotel/6.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="header">Family</div>
+                            <div class="meta">
+                                <span class="price">Цена от 2000 руб за ночь</span>
+                                <span class="stay">6 Weeks</span>
+                            </div>
+                            <div class="description">
+                                <p>Отель Family расположен в Сызрани. К услугам гостей ресторан, бар и сад. Доступен
+                                    бесплатный Wi-Fi. В отеле можно забронировать семейные номера. Огромное спасибо за
+                                    вашу качественную работу! Очень достойный отель с достойной ценой. Понравилось:
+                                    чистота, обставленность номерного фонда, отличные завтраки в уютном ресторане,
+                                    удобное месторасположение, приветливый, услужливый и понимающий персонал! Будем
+                                    рекомендовать друзьям. Удачи и успехов в работе</p>
+                            </div>
+                            <div class="extra">
+                                <div class="ui label">Бесплатный Wi-Fi</div>
+                                <div class="ui label">Бар</div>
+                                <div class="ui right floated primary button">
+                                    Подробнее
+                                    <i class="right chevron icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="items">
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+                            <div class="description_item">
+                                <div class="caption_item">Гостиница "Сызрань"</div>
+                                <p>Отель «Гараж» расположен в Сызрани. На территории отеля обустроена бесплатная частная
+                                    парковка. Каждое утро в отеле сервируют завтрак с выбором блюд из меню.</p>
+                                <p>Отличная гостиница, для отдыха! Удивила столовая 90 годов, а в целом кухня хорошая,
+                                    есть выбор блюд, салатов и напитков. Номера чистые, претензий нет. Стоянка
+                                    автотранспорта очень большая, для водителей есть все удобства.</p>
+                            </div>
+
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item">
+                        </div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Гостиница Гараж</div>
+                                <p>Отель «Гараж» расположен в Сызрани. На территории отеля обустроена бесплатная частная
+                                    парковка. Каждое утро в отеле сервируют завтрак с выбором блюд из меню. Отличная
+                                    гостиница, для отдыха! Удивила столовая 90 годов, а в целом кухня хорошая, есть
+                                    выбор блюд, салатов и напитков. Номера чистые, претензий нет. Стоянка автотранспорта
+                                    очень большая, для водителей есть все</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Гостиничный комплекс Каскад</div>
+                                <p>Четырехзвездочный отель «Каскад» расположен на берегу реки Волга в городе Сызрань.
+                                    При отеле работает бар и ресторан. К услугам гостей круглосуточная стойка
+                                    регистрации и фитнес-центр со спа-зоной. Everything was just good as good was price!
+                                </p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Hotel Apriori</div>
+                                <p>Отель «Априори» расположен в Сызрани. К услугам гостей ресторан, круглосуточная
+                                    стойка регистрации и бесплатный Wi-Fi. Осуществляется доставка еды и напитков в
+                                    номер. Понравилось все, завтрак был в номер, все вкусно Ещё на ресепшене работает
+                                    девушка Надежда, ей особая благодарность за помощь, так как мы приехали поздно, а у
+                                    меня была жуткая аллергия, постаралась найти лекарство для меня</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">U Kremlya</div>
+                                <p>Отель «У Кремля» расположен в Сызрани. При отеле работает бар. К услугам гостей
+                                    круглосуточная стойка регистрации и ресторан. Осуществляется доставка еды и напитков
+                                    в номер. Чудесная и чистая гостиница, персонал очень приветливый, всегда помогут и
+                                    подскажут. В номере все есть. На этаже есть кухня с водой, чайником и посудой.
+                                    Чистое новое белье.</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Family</div>
+                                <p>Отель Family расположен в Сызрани. К услугам гостей ресторан, бар и сад. Доступен
+                                    бесплатный Wi-Fi. В отеле можно забронировать семейные номера. Огромное спасибо за
+                                    вашу качественную работу! Очень достойный отель с достойной ценой. Понравилось:
+                                    чистота, обставленность номерного фонда, отличные завтраки в уютном ресторане,
+                                    удобное месторасположение, приветливый, услужливый и понимающий персонал! Будем
+                                    рекомендовать друзьям. Удачи и успехов в работе</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Vash Uyut Hotel</div>
+                                <p>Отель «Ваш Уют» расположен в Сызрани. К услугам гостей бесплатный Wi-Fi и бесплатная
+                                    частная парковка. В некоторых номерах имеется кухня с холодильником и микроволновой
+                                    печью. Все понравилось. Рекомендую.</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Гостиница Юбилейная</div>
+                                <p>Гостиница «Юбилейная» с рестораном расположена в Сызрани. На территории действует
+                                    бесплатный Wi-Fi. В каждом номере к услугам гостей спутниковое телевидение,
+                                    кондиционер и мини-бар. Хорошая гостиница. Отличные завтраки. Чисто, уютно!!</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img_item"></div>
+                        <div class="content_item">
+
+                            <div class="description_item">
+                                <div class="caption_item">Chaika Hotel</div>
+                                <p>Трехзвездочный отель «Чайка» расположен в Сызрани. На территории работает бар,
+                                    ресторан, круглосуточная стойка регистрации и бесплатный Wi-Fi. Все было очень
+                                    удобно, комфортно чисто</p>
+                            </div>
+                            <div class="info">
+                                <div class="like">8.9</div>
+                                <div class="price">Цена от <p class="num">2000 руб</p> за ночь</div>
+                                <div class="ui primary button">Подробнее</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class_footer width_adaptive">
+            <div class="column">
+                <div class="caption_column column_footer_item">Главная</div>
+
+                <ul>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="caption_column">Меню</div>
+
+                <ul>
+                    <li class="column_footer_item">Афиша</li>
+                    <li class="column_footer_item">Гостиницы</li>
+                    <li class="column_footer_item">Еда</li>
+                    <li class="column_footer_item">Магазины</li>
+                    <li class="column_footer_item">Развлечения</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="caption_column">Информация</div>
+
+                <ul>
+                    <li class="column_footer_item">О проекте</li>
+                    <li class="column_footer_item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var item = 0
+
+    setInterval(() => {
+        if (item < 2) {
+            document.querySelector('.img_content').scrollBy({
+                top: window.innerHeight * (item + 1),
+                behavior: 'smooth'
+            })
+            item++
+        } else {
+            document.querySelector('.img_content').scroll(0, 0)
+            item = 0
+        }
+    }, 15000)
+    $('.ui.dropdown')
+        .dropdown({
+            allowAdditions: true
+        })
+    $('#rangestart').calendar({
+        type: 'date',
+        endCalendar: $('#rangeend')
+    });
+    $('#rangeend').calendar({
+        type: 'date',
+        startCalendar: $('#rangestart')
+    });
+</script>
+
+</html>

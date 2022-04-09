@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="afisha.css">
+    <title>Сызрань</title>
+</head>
+<body>
+    <header>
+        <ul class="head_menu">
+            <!-- <li class="item_menu">Достопримечательности</li> -->
+            <li class="item_menu"><a href="afisha.html">Афиша</a></li>
+            <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+            <li class="item_menu"><a href="food.html">Еда</a></li>
+            <li class="item_menu"><a href="shop.html">Магазины</a></li>
+            <li class="item_menu"><a href="entertaiment.html">Развлечения</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="carusel">
+            <div class="img_content">
+                <div class="img photo_1"></div>
+                <div class="img photo_2"></div>
+                <div class="img photo_3"></div>
+            </div>
+            <div class="des_field">
+                <div class="caption_carusel width_adaptive">Заголовок</div>
+                <div class="description_carusel width_adaptive">Описание для картики, которая сейчас на экрае</div>
+            </div>
+
+            <div class="switch">
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+            </div>
+        </div>
+        <div class="today_action">
+
+        </div>
+
+        <div class="filter width_adaptive">
+            <div class="ui form">
+                <div class="ui icon input" >
+                    <input type="text" placeholder="Поиск...">
+                </div>
+
+                <div class="ui dropdown">
+                    <div class="default text">Выберете область</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                      <div class="item">Кино</div>
+                      <div class="item">Театр</div>
+                      <div class="item">Выставки</div>
+                    </div>
+                </div>
+
+                <div class="two fields">
+                  <div class="field">
+                    <div class="ui calendar" id="rangestart">
+                      <div class="ui input left icon">
+                        <i class="calendar icon"></i>
+                        <input type="text" placeholder="Start">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui calendar" id="rangeend">
+                      <div class="ui input left icon">
+                        <i class="calendar icon"></i>
+                        <input type="text" placeholder="End">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="ui button active">Применить</button>
+            </div>
+            
+        </div>
+
+        <div class="groups">
+
+            <div class="group width_adaptive">
+                <h1 class="ui horizontal divider header"> Кино </h1>
+                <div class="ui link cards">
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/kino/1.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Финник</div>
+                        <div class="meta">
+                          <span>2022, Мультфильм</span>
+                        </div>
+                        <div class="description">
+                            <p>Домовой заводит дружбу с девочкой</p>
+                        </div>
+                      </div>
+                      <div class="extra  content">
+                        <span class="right floated">
+                        от 100 руб
+                        </span>
+                        <span>
+                            <i class="like icon"></i>
+                          75
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/kino/2.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Мальчик-дельфин</div>
+                          <div class="meta">
+                            <span>2022, Мультфильм</span>
+                          </div>
+                          <div class="description">
+                              <p>Сказка о морском Маугли</p>
+                          </div>
+                        </div>
+                        <div class="extra  content">
+                          <span class="right floated">
+                          от 100 руб
+                          </span>
+                          <span>
+                              <i class="like icon"></i>
+                            75
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/kino/3.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Моя ужасная сестра</div>
+                          <div class="meta">
+                            <span>2022, Комедия</span>
+                          </div>
+                          <div class="description">
+                              <p>Две сводные сестры пытаются завоевать внимание родителей</p>
+                          </div>
+                        </div>
+                        <div class="extra  content">
+                          <span class="right floated">
+                          от 100 руб
+                          </span>
+                          <span>
+                              <i class="like icon"></i>
+                            75
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/kino/4.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Осада</div>
+                          <div class="meta">
+                            <span>2022, Боевик</span>
+                          </div>
+                          <div class="description">
+                              <p>Брюс Уиллис встает на борьбу с ворами, взявшими в заложники врача</p>
+                          </div>
+                        </div>
+                        <div class="extra  content">
+                          <span class="right floated">
+                          от 100 руб
+                          </span>
+                          <span>
+                              <i class="like icon"></i>
+                            75
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/kino/1.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Финник</div>
+                          <div class="meta">
+                            <span>2022, Мультфильм</span>
+                          </div>
+                          <div class="description">
+                              <p>Домовой заводит дружбу с девочкой</p>
+                          </div>
+                        </div>
+                        <div class="extra  content">
+                          <span class="right floated">
+                          от 100 руб
+                          </span>
+                          <span>
+                              <i class="like icon"></i>
+                            75
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/kino/4.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Осада</div>
+                          <div class="meta">
+                            <span>2022, Боевик</span>
+                          </div>
+                          <div class="description">
+                              <p>Брюс Уиллис встает на борьбу с ворами, взявшими в заложники врача</p>
+                          </div>
+                        </div>
+                        <div class="extra  content">
+                          <span class="right floated">
+                          от 100 руб
+                          </span>
+                          <span>
+                              <i class="like icon"></i>
+                            75
+                          </span>
+                        </div>
+                    </div>
+                      <div class="card">
+                          <div class="image">
+                            <img src="assets/kino/2.jpg">
+                          </div>
+                          <div class="content">
+                            <div class="header">Мальчик-дельфин</div>
+                            <div class="meta">
+                              <span>2022, Мультфильм</span>
+                            </div>
+                            <div class="description">
+                                <p>Сказка о морском Маугли</p>
+                            </div>
+                          </div>
+                          <div class="extra  content">
+                            <span class="right floated">
+                            от 100 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                              75
+                            </span>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="image">
+                            <img src="assets/kino/3.jpg">
+                          </div>
+                          <div class="content">
+                            <div class="header">Моя ужасная сестра</div>
+                            <div class="meta">
+                              <span>2022, Комедия</span>
+                            </div>
+                            <div class="description">
+                                <p>Две сводные сестры пытаются завоевать внимание родителей</p>
+                            </div>
+                          </div>
+                          <div class="extra  content">
+                            <span class="right floated">
+                            от 100 руб
+                            </span>
+                            <span>
+                                <i class="like icon"></i>
+                              75
+                            </span>
+                          </div>
+                      </div>
+                      
+                </div>
+             
+            </div>
+            
+            <div class="group width_adaptive">
+                <h1 class="ui horizontal divider header"> Театр </h1>
+                <div class="ui link cards">
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/teatr/1.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Вишневый сад</div>
+                        <div class="meta">
+                          <span>Губернский театр</span>
+                          <br>
+                          <span>Классическая драма</span>
+                        </div>
+                        <div class="description">
+                            <p>Бессмертная классика в постановке Сергея Безрукова</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/teatr/2.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Ричард III</div>
+                          <div class="meta">
+                            <span>Театр им. Вахтангова</span>
+                            <br>
+                            <span>Драматический</span>
+                          </div>
+                          <div class="description">
+                              <p>Выдающаяся роль артиста Севриновского</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/teatr/3.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Дом под снос</div>
+                          <div class="meta">
+                            <span>Театр Российской армии</span>
+                            <br>
+                            <span>Драматический</span>
+                          </div>
+                          <div class="description">
+                              <p>Две сводные сестры пытаются завоевать внимание родителей</p>
+                          </div>
+                        </div>
+                    </div>
+                   
+                </div>
+               </div>
+            
+            <div class="group width_adaptive">
+                <h1 class="ui horizontal divider header"> Выставки </h1>
+                <div class="ui link cards">
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/vystavki/1.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Палеонтологическая экспозиция</div>
+                        <div class="meta">
+                          <span>Естественно-научная</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/vystavki/2.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Ожидание космоса</div>
+                          <div class="meta">
+                            <span>Естественно-научная</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/vystavki/1.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Природа Самарского края</div>
+                          <div class="meta">
+                            <span>Естественно-научная</span>
+                          </div>
+                          
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/vystavki/4.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Русское искусство второй половины XIX века</div>
+                          <div class="meta">
+                            <span>Живопись</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class_footer width_adaptive">
+            <div class="column">
+                <div class="caption_column column_footer_item">Главная</div>
+    
+                <ul>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Меню</div>
+    
+                <ul>
+                    <li class="column_footer_item">Афиша</li>
+                    <li class="column_footer_item">Гостиницы</li>
+                    <li class="column_footer_item">Еда</li>
+                    <li class="column_footer_item">Магазины</li>
+                    <li class="column_footer_item">Развлечения</li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Информация</div>
+    
+                <ul>
+                    <li class="column_footer_item">О проекте</li>
+                    <li class="column_footer_item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+        var item = 0
+    
+    setInterval(() => {
+        if(item < 2){
+            document.querySelector('.img_content').scrollBy({
+            top: window.innerHeight * (item + 1),
+            behavior: 'smooth'
+        })
+            item++
+        } else {
+            document.querySelector('.img_content').scroll(0, 0)
+            item = 0
+        }
+    }, 15000)
+    $('.ui.dropdown')
+  .dropdown({
+    allowAdditions: true
+  })
+    $('#rangestart').calendar({
+  type: 'date',
+  endCalendar: $('#rangeend')
+});
+$('#rangeend').calendar({
+  type: 'date',
+  startCalendar: $('#rangestart')
+});
+</script>
+</html>

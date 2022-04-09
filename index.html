@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Сызрань</title>
+</head>
+<body>
+    <header>
+        <ul class="head_menu">
+            <!-- <li class="item_menu">Достопримечательности</li> -->
+            <li class="item_menu"><a href="afisha.html">Афиша</a></li>
+            <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+            <li class="item_menu"><a href="food.html">Еда</a></li>
+            <li class="item_menu"><a href="shop.html">Магазины</a></li>
+            <li class="item_menu"><a href="entertaiment.html">Развлечения</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="carusel">
+            <div class="img_content">
+                <div class="img photo_1"></div>
+                <div class="img photo_2"></div>
+                <div class="img photo_3"></div>
+            </div>
+            <div class="des_field">
+                <div class="caption_carusel width_adaptive">Заголовок</div>
+                <div class="description_carusel width_adaptive">Описание для картики, которая сейчас на экрае</div>
+            </div>
+
+            <div class="switch">
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+            </div>
+        </div>
+
+
+        <div class="description_sity width_adaptive">
+            <h1>Сызрань</h1>
+            <br>
+            <br>
+            <p>
+                Сызранцы гордо именуют свой город «Петровский город с кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из самых ранних указов Петра Алексеевича аж в 1683 году.
+                <br>
+                <br>
+                Несмотря на то, что время оставило от кремля всего два строения (башня кремля и звонница), возведённых уже в XVIII веке, жителям города есть, чем гордиться.
+                <br>
+                <br>
+                Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»).
+                <br>
+                <br>
+                В 1906 году Сызрань практически полностью уничтожил пожар, и город отстроили заново. В основном, строили каменные дома и купеческие особняки – сегодня на них можно полюбоваться на главной улице Сызрани Советской.
+                <br>
+                <br>
+                Население Сызрани – 175 000 человек, расстояние от Самары – 200 километров.
+            </p>
+        </div>
+
+
+    </div>
+    <footer>
+        <div class="class_footer width_adaptive">
+            <div class="column">
+                <div class="caption_column column_footer_item">Главная</div>
+    
+                <ul>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Меню</div>
+    
+                <ul>
+                    <li class="column_footer_item">Афиша</li>
+                    <li class="column_footer_item">Гостиницы</li>
+                    <li class="column_footer_item">Еда</li>
+                    <li class="column_footer_item">Магазины</li>
+                    <li class="column_footer_item">Развлечения</li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Информация</div>
+    
+                <ul>
+                    <li class="column_footer_item">О проекте</li>
+                    <li class="column_footer_item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var item = 0
+    
+    setInterval(() => {
+        if(item < 2){
+            document.querySelector('.img_content').scrollBy({
+            top: window.innerHeight * (item + 1),
+            behavior: 'smooth'
+        })
+            item++
+        } else {
+            document.querySelector('.img_content').scroll(0, 0)
+            item = 0
+        }
+    }, 15000)
+</script>
+</html>

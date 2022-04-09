@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="food.css">
+    <title>Сызрань</title>
+</head>
+<body>
+    <header>
+        <ul class="head_menu">
+            <!-- <li class="item_menu">Достопримечательности</li> -->
+            <li class="item_menu"><a href="afisha.html">Афиша</a></li>
+            <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+            <li class="item_menu"><a href="food.html">Еда</a></li>
+            <li class="item_menu"><a href="shop.html">Магазины</a></li>
+            <li class="item_menu"><a href="entertaiment.html">Развлечения</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="carusel">
+            <div class="img_content">
+                <div class="img photo_1"></div>
+                <div class="img photo_2"></div>
+                <div class="img photo_3"></div>
+            </div>
+            <div class="des_field">
+                <div class="caption_carusel width_adaptive">Заголовок</div>
+                <div class="description_carusel width_adaptive">Описание для картики, которая сейчас на экрае</div>
+            </div>
+
+            <div class="switch">
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+                <div class="switch_item"></div>
+            </div>
+        </div>
+        <div class="today_action">
+
+        </div>
+
+        <div class="filter width_adaptive">
+            <div class="ui form">
+                <div class="ui icon input" >
+                    <input type="text" placeholder="Поиск...">
+                </div>
+<!-- 
+                <div class="ui dropdown">
+                    <div class="default text">Выберете область</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                      <div class="item"></div>
+                      <div class="item">Театр</div>
+                      <div class="item">Выставки</div>
+                    </div>
+                </div> -->
+
+                <div class="two fields">
+                  <div class="field">
+                    <div class="ui calendar" id="rangestart">
+                      <div class="ui input left icon">
+                        <i class="calendar icon"></i>
+                        <input type="text" placeholder="Start">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui calendar" id="rangeend">
+                      <div class="ui input left icon">
+                        <i class="calendar icon"></i>
+                        <input type="text" placeholder="End">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="ui button active">Применить</button>
+            </div>
+            
+        </div>
+
+        <div class="groups">
+            <div class="group width_adaptive">
+                <div class="ui link cards">
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/food/1.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Торо Россо</div>
+                        <div class="meta">
+                          <span>Стейк-хаус, Бар</span>
+                        </div>
+                        <div class="description">
+                          <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                          <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                          <p><i class="icon marker"></i>ул. Ульяновская, 52</p>
+                        </div>
+                      </div>
+                      <div class="extra  content">
+                        <span class="right floated">
+                        Ср. чек 1000 руб
+                        </span>
+                        <span>
+                            <i class="like icon"></i>
+                          75
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/food/2.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Кафе У Кремля</div>
+                        <div class="meta">
+                          <span>Европейская, Русская</span>
+                        </div>
+                        <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>ул. Советская 1а</p>
+                        </div>
+                      </div>
+                      <div class="extra content">
+                        <span class="right floated">
+                            Ср. чек 1000 руб
+                        </span>
+                        <span>
+                            <i class="like icon"></i>
+                          35
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="image">
+                        <img src="assets/food/3.jpg">
+                      </div>
+                      <div class="content">
+                        <div class="header">Панорама</div>
+                        <div class="meta">
+                          <span>Японская, Европейская</span>
+                        </div>
+                        <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>Лодочный пер.14</p>
+                        </div>
+                      </div>
+                      <div class="extra content">
+                        <span class="right floated">
+                            Ср. чек 1000 руб
+                        </span>
+                        <span>
+                          <i class="like icon"></i>
+                          151
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                          <img src="assets/food/4.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Ресторан Старый хутор</div>
+                          <div class="meta">
+                            <span>Русская, Европейская</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>Московский тракт 11</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/food/5.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Molotov Grill&Bar</div>
+                          <div class="meta">
+                            <span>Американская, Бар</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>ул. Ульяновская, 2A</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/food/6.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Хинкальная АВЛАБАР</div>
+                          <div class="meta">
+                            <span>Грузинская</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>ул.Челюскинцев 15</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/food/7.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Траттория</div>
+                          <div class="meta">
+                            <span>Итальянская, Средиземноморская</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>пер. Опорный 16</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/food/8.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Tabasco</div>
+                          <div class="meta">
+                            <span>&nbsp</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>ул. Советская, 11/13</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="assets/food/9.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Ресторанный комплекс Рай</div>
+                          <div class="meta">
+                            <span>Итальянская, Японская</span>
+                          </div>
+                          <div class="description">
+                            <p><i class="icon time"></i>Ежедневно, 12:00–23:00</p>
+                            <p><i class="icon phone"></i>+7(927)123-45-67</p>
+                            <p><i class="icon marker"></i>пр. Космонавтов, 11</p>
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <span class="right floated">
+                            Ср. чек 1000 руб
+                          </span>
+                          <span>
+                            <i class="like icon"></i>
+                            151
+                          </span>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class_footer width_adaptive">
+            <div class="column">
+                <div class="caption_column column_footer_item">Главная</div>
+    
+                <ul>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                    <li class="column_footer_item"></li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Меню</div>
+    
+                <ul>
+                    <li class="column_footer_item">Афиша</li>
+                    <li class="column_footer_item">Гостиницы</li>
+                    <li class="column_footer_item">Еда</li>
+                    <li class="column_footer_item">Магазины</li>
+                    <li class="column_footer_item">Развлечения</li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <div class="caption_column">Информация</div>
+    
+                <ul>
+                    <li class="column_footer_item">О проекте</li>
+                    <li class="column_footer_item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+        var item = 0
+    
+    setInterval(() => {
+        if(item < 2){
+            document.querySelector('.img_content').scrollBy({
+            top: window.innerHeight * (item + 1),
+            behavior: 'smooth'
+        })
+            item++
+        } else {
+            document.querySelector('.img_content').scroll(0, 0)
+            item = 0
+        }
+    }, 15000)
+    $('.ui.dropdown')
+  .dropdown({
+    allowAdditions: true
+  })
+    $('#rangestart').calendar({
+  type: 'date',
+  endCalendar: $('#rangeend')
+});
+$('#rangeend').calendar({
+  type: 'date',
+  startCalendar: $('#rangestart')
+});
+</script>
+</html>
