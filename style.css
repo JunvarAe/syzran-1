@@ -39,6 +39,12 @@ header .item_menu a {
     color: white;
     cursor: pointer;
 }
+header{
+    position: relative;
+}
+.toggle{
+    display: none;
+}
 /*.content{
     width: 100%;
     min-height: 200vh;
@@ -106,6 +112,7 @@ header .item_menu a {
 .caption_carusel{
     font-size: 32px;
     padding: 1rem;
+    line-height: 3rem;
 }
 .description_carusel{
     padding: 1rem;
@@ -113,17 +120,18 @@ header .item_menu a {
 .width_adaptive{
     max-width: 1400px;
     margin: auto;
+    padding: 1rem;
 }
 .description_sity{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 5rem 0 10rem 0;
 }
 footer{
     width: 100%;
     background: rgb(66, 144, 218);
-    height: 50vh;
     display: flex;
     justify-content: center;
     color: white;
@@ -149,4 +157,78 @@ footer{
 }
 .column_footer_item:hover{
     text-decoration: underline;
+}
+
+@media(max-width: 464px){
+    .ui.form{
+        display: flex;
+        flex-direction: column;
+    }
+    .ui.form .fields>.field{
+        padding: 0;
+        
+    }
+    .ui.form .fields,
+    .ui.input,
+    .ui.active.button{
+        width: 100%;
+    }
+    .toggle{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: url(assets/menu.png);
+        width: 42px;
+        height: 42px;
+        z-index: 2;
+        background-size: cover;
+        filter: invert(1);
+        transition: 0.2s;
+    }
+    .close{
+        top: 1.4rem;
+        right: 1.4rem;
+        background: url(assets/close.png);
+        background-size: cover;
+        width: 28px;
+        height: 28px;
+        z-index: 5;
+        transition: 0.2s;
+    }
+    .des_field{
+        padding: 1rem;
+    }
+    .head_menu{
+        flex-direction: column;
+        position: fixed;
+        background: #4290da;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        gap: 2rem;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: 0.2s;
+    }
+    .view{
+        display: flex;
+        height: 100%;
+    }
+    .description_sity{
+        padding: 5rem 1rem 10rem 1rem;
+    }
+    .class_footer{
+        flex-direction: column;
+    }
+    .ui .content .score{
+        border-radius: 0 0 3px 3px;
+        padding: 0.7rem 2rem;
+    }
+    .ui.cards>.card{
+        margin: 0.875em auto;
+    }
 }

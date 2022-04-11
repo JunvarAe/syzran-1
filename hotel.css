@@ -70,3 +70,13 @@
     border-radius: 3px;
     background-color: #22922a;
 }
+@media(max-width: 767px){
+    
+    .ui .content .score{
+        border-radius: 0 0 3px 3px;
+        padding: 0.7rem 2rem;
+    }
+    .ui.items:not(.unstackable)>.item>.image, .ui.items:not(.unstackable)>.item>.image>img{
+        max-height: none!important;
+    }
+}

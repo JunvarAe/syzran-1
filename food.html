@@ -17,14 +17,15 @@
     <title>Сызрань</title>
 </head>
 <body>
-    <header>
-      <ul class="head_menu">
+  <header>
+    <div class="toggle" onclick="toggle()"></div>
+    <ul class="head_menu">
         <li class="item_menu"><a href="afisha.html">Развлечения</a></li>
         <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
         <li class="item_menu"><a href="food.html">Еда</a></li>
         <li class="item_menu"><a href="shop.html">Сувениры</a></li>
     </ul>
-    </header>
+</header>
 
     <div class="content">
         <div class="carusel">
@@ -324,7 +325,7 @@
                       </div>
                       <div class="card">
                         <div class="image">
-                          <img src="assets/food/9.jpg">
+                          <img src="assets/food/10.jpg">
                         </div>
                         <div class="content">
                           <div class="header">Астория</div>
@@ -350,7 +351,7 @@
                       </div>
                       <div class="card">
                         <div class="image">
-                          <img src="assets/food/9.jpg">
+                          <img src="assets/food/11.jpg">
                         </div>
                         <div class="content">
                           <div class="header">Barbaris</div>
@@ -383,13 +384,6 @@
         <div class="class_footer width_adaptive">
             <div class="column">
                 <div class="caption_column column_footer_item">Главная</div>
-    
-                <ul>
-                    <li class="column_footer_item"></li>
-                    <li class="column_footer_item"></li>
-                    <li class="column_footer_item"></li>
-                    <li class="column_footer_item"></li>
-                </ul>
             </div>
             
             <div class="column">
@@ -453,5 +447,15 @@ $('#rangeend').calendar({
   type: 'date',
   startCalendar: $('#rangestart')
 });
+
+function toggle(){
+        if($('.toggle').hasClass('close')){
+            $('.toggle').removeClass('close')
+            $('.head_menu').removeClass('view')
+        } else {
+            $('.toggle').addClass('close')
+            $('.head_menu').addClass('view')
+        }
+    }
 </script>
 </html>
