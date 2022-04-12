@@ -35,7 +35,8 @@
     border-color: white;
     background: #ffffff40;
 }
-header .item_menu a {
+header .item_menu a,
+footer .column_footer_item a {
     color: white;
     cursor: pointer;
 }

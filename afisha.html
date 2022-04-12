@@ -38,8 +38,13 @@
         <div class="img photo_3"></div>
       </div>
       <div class="des_field">
-        <div class="caption_carusel width_adaptive">Заголовок</div>
-        <div class="description_carusel width_adaptive">Описание для картики, которая сейчас на экрае</div>
+        <div class="caption_carusel width_adaptive">Сызрань</div>
+                <div class="description_carusel width_adaptive">Сызранцы гордо именуют свой город «Петровский город с
+                    кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из
+                    самых ранних указов Петра Алексеевича аж в 1683 году.
+                    Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно
+                    отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»).
+                </div>
       </div>
 
       <div class="switch">
@@ -338,18 +343,17 @@
   <footer>
     <div class="class_footer width_adaptive">
       <div class="column">
-        <div class="caption_column column_footer_item">Главная</div>
+        <div class="caption_column column_footer_item"><a href="/">Главная</a></div>
       </div>
 
       <div class="column">
         <div class="caption_column">Меню</div>
 
         <ul>
-          <li class="column_footer_item">Афиша</li>
-          <li class="column_footer_item">Гостиницы</li>
-          <li class="column_footer_item">Еда</li>
-          <li class="column_footer_item">Магазины</li>
-          <li class="column_footer_item">Развлечения</li>
+          <li class="column_footer_item"><a href="afisha.html">Развлечения</a></li>
+          <li class="column_footer_item"><a href="hotel.html">Гостиницы</a></li>
+          <li class="column_footer_item"><a href="food.html">Еда</a></li>
+          <li class="column_footer_item"><a href="shop.html">Сувениры</a></li>
         </ul>
       </div>
 
@@ -365,20 +369,31 @@
   </footer>
 </body>
 <script>
-  var item = 0
-
-  setInterval(() => {
-    if (item < 2) {
-      document.querySelector('.img_content').scrollBy({
-        top: window.innerHeight * (item + 1),
-        behavior: 'smooth'
-      })
-      item++
-    } else {
-      document.querySelector('.img_content').scroll(0, 0)
-      item = 0
-    }
-  }, 15000)
+   var item = 0
+    var mass = [{cap : "Крепость на Волге",des : "Сызранцы гордо именуют свой город «Петровский город с кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из самых ранних указов Петра Алексеевича аж в 1683 году.Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»)."},
+                {cap : "Сызранская Железная дорога ",des : "Сызрань - крупнейший железно-дорожный узел Поволжья. Станция эта появилась в 1874 году, когда сюда через Пензу, была построена Моршанско- Сызранская железная дорога, а уже в 1880 году свершилось историческое событие - железная дорога шагнула за Волгу, по крупнейшему на то время 13-ти пролетному Александровскому мосту, связав Сызрань с Самарой и Уфой."},
+                {cap : "Сызранский фестиваль ",des : "Сы́зранский помидо́р — региональный праздник-фестиваль, посвящённый помидору, произрастающему в Сызрани. Фестиваль проводят с 2001 года."}
+                    ]
+        $(".caption_carusel").html(mass[item].cap)
+        $(".description_carusel").html(mass[item].des)
+    setInterval(() => {
+        if(item < 2){
+            document.querySelector('.img_content').scrollBy({
+            top: window.innerHeight * (item + 1),
+            behavior: 'smooth'
+        })
+        item++
+        $(".caption_carusel").html(mass[item].cap)
+        $(".description_carusel").html(mass[item].des)
+        
+            
+        } else {
+            document.querySelector('.img_content').scroll(0, 0)
+            item = 0
+            $(".caption_carusel").html(mass[item].cap)
+            $(".description_carusel").html(mass[item].des)            
+        }
+    }, 15000)
   $('.ui.dropdown')
     .dropdown({
       allowAdditions: true
