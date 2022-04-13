@@ -5,15 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
-  <link
-    href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css"
-    rel="stylesheet" type="text/css" />
   <script
     src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="afisha.css">
   <title>Сызрань</title>
@@ -23,12 +20,12 @@
   <header>
     <div class="toggle" onclick="toggle()"></div>
     <ul class="head_menu">
-        <li class="item_menu"><a href="afisha.html">Развлечения</a></li>
-        <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
-        <li class="item_menu"><a href="food.html">Еда</a></li>
-        <li class="item_menu"><a href="shop.html">Сувениры</a></li>
+      <li class="item_menu"><a href="afisha.html">Развлечения</a></li>
+      <li class="item_menu"><a href="hotel.html">Гостиницы</a></li>
+      <li class="item_menu"><a href="food.html">Еда</a></li>
+      <li class="item_menu"><a href="shop.html">Сувениры</a></li>
     </ul>
-</header>
+  </header>
 
   <div class="content">
     <div class="carusel">
@@ -39,12 +36,12 @@
       </div>
       <div class="des_field">
         <div class="caption_carusel width_adaptive">Сызрань</div>
-                <div class="description_carusel width_adaptive">Сызранцы гордо именуют свой город «Петровский город с
-                    кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из
-                    самых ранних указов Петра Алексеевича аж в 1683 году.
-                    Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно
-                    отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»).
-                </div>
+        <div class="description_carusel width_adaptive">Сызранцы гордо именуют свой город «Петровский город с
+          кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из
+          самых ранних указов Петра Алексеевича аж в 1683 году.
+          Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно
+          отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»).
+        </div>
       </div>
 
       <div class="switch">
@@ -68,31 +65,15 @@
           <i class="dropdown icon"></i>
 
           <div class="menu">
+            <div class="item default">Выберете область</div>
             <div class="item">Кино</div>
             <div class="item">Театр</div>
             <div class="item">Выставки</div>
+            <div class="item">Прочее</div>
           </div>
         </div>
-
-        <div class="two fields">
-          <div class="field">
-            <div class="ui calendar" id="rangestart">
-              <div class="ui input left icon">
-                <i class="calendar icon"></i>
-                <input type="text" placeholder="Start">
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui calendar" id="rangeend">
-              <div class="ui input left icon">
-                <i class="calendar icon"></i>
-                <input type="text" placeholder="End">
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="ui button active">Применить</button>
+        <button class="ui button active" onclick="filter()">Применить</button>
+        <a onclick="filterReset()">сбросить фильтр</a>
       </div>
 
     </div>
@@ -183,7 +164,7 @@
       </div>
 
       <div class="group width_adaptive">
-        <h1 class="ui horizontal divider header"> Театр </h1>
+        <h1 class="ui horizontal divider header">Театр</h1>
         <div class="ui link cards">
           <div class="card">
             <div class="image">
@@ -334,7 +315,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -369,31 +350,31 @@
   </footer>
 </body>
 <script>
-   var item = 0
-    var mass = [{cap : "Крепость на Волге",des : "Сызранцы гордо именуют свой город «Петровский город с кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из самых ранних указов Петра Алексеевича аж в 1683 году.Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»)."},
-                {cap : "Сызранская Железная дорога ",des : "Сызрань - крупнейший железно-дорожный узел Поволжья. Станция эта появилась в 1874 году, когда сюда через Пензу, была построена Моршанско- Сызранская железная дорога, а уже в 1880 году свершилось историческое событие - железная дорога шагнула за Волгу, по крупнейшему на то время 13-ти пролетному Александровскому мосту, связав Сызрань с Самарой и Уфой."},
-                {cap : "Сызранский фестиваль ",des : "Сы́зранский помидо́р — региональный праздник-фестиваль, посвящённый помидору, произрастающему в Сызрани. Фестиваль проводят с 2001 года."}
-                    ]
-        $(".caption_carusel").html(mass[item].cap)
-        $(".description_carusel").html(mass[item].des)
-    setInterval(() => {
-        if(item < 2){
-            document.querySelector('.img_content').scrollBy({
-            top: window.innerHeight * (item + 1),
-            behavior: 'smooth'
-        })
-        item++
-        $(".caption_carusel").html(mass[item].cap)
-        $(".description_carusel").html(mass[item].des)
-        
-            
-        } else {
-            document.querySelector('.img_content').scroll(0, 0)
-            item = 0
-            $(".caption_carusel").html(mass[item].cap)
-            $(".description_carusel").html(mass[item].des)            
-        }
-    }, 15000)
+  var item = 0
+  var mass = [{ cap: "Крепость на Волге", des: "Сызранцы гордо именуют свой город «Петровский город с кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из самых ранних указов Петра Алексеевича аж в 1683 году.Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»)." },
+  { cap: "Сызранская Железная дорога ", des: "Сызрань - крупнейший железно-дорожный узел Поволжья. Станция эта появилась в 1874 году, когда сюда через Пензу, была построена Моршанско- Сызранская железная дорога, а уже в 1880 году свершилось историческое событие - железная дорога шагнула за Волгу, по крупнейшему на то время 13-ти пролетному Александровскому мосту, связав Сызрань с Самарой и Уфой." },
+  { cap: "Сызранский фестиваль ", des: "Сы́зранский помидо́р — региональный праздник-фестиваль, посвящённый помидору, произрастающему в Сызрани. Фестиваль проводят с 2001 года." }
+  ]
+  $(".caption_carusel").html(mass[item].cap)
+  $(".description_carusel").html(mass[item].des)
+  setInterval(() => {
+    if (item < 2) {
+      document.querySelector('.img_content').scrollBy({
+        top: window.innerHeight * (item + 1),
+        behavior: 'smooth'
+      })
+      item++
+      $(".caption_carusel").html(mass[item].cap)
+      $(".description_carusel").html(mass[item].des)
+
+
+    } else {
+      document.querySelector('.img_content').scroll(0, 0)
+      item = 0
+      $(".caption_carusel").html(mass[item].cap)
+      $(".description_carusel").html(mass[item].des)
+    }
+  }, 15000)
   $('.ui.dropdown')
     .dropdown({
       allowAdditions: true
@@ -406,15 +387,46 @@
     type: 'date',
     startCalendar: $('#rangestart')
   });
-  function toggle(){
-        if($('.toggle').hasClass('close')){
-            $('.toggle').removeClass('close')
-            $('.head_menu').removeClass('view')
-        } else {
-            $('.toggle').addClass('close')
-            $('.head_menu').addClass('view')
-        }
+  function toggle() {
+    if ($('.toggle').hasClass('close')) {
+      $('.toggle').removeClass('close')
+      $('.head_menu').removeClass('view')
+    } else {
+      $('.toggle').addClass('close')
+      $('.head_menu').addClass('view')
     }
+  }
+
+  function filterReset() {
+    $('.cards .card').show()
+    $('.group').show()
+    $('.form .dropdown .text').addClass('default').text('Выберете область')
+    $('.form .input input').val('')
+  }
+
+  function filter() {
+    var text = $('.form .input input').val()
+    var field = $('.form .dropdown .text').text()
+
+    $('.cards .card').show()
+    var items = $('.cards .card')
+    for (var item of items) {
+      if (text.trim().length > 0) {
+        if (!$(item).text().includes(text)) {
+          $(item).hide()
+        }
+      }
+    }
+
+    $('.group').show()
+    if($('.group .horizontal.header').text().includes(field)){
+      for(var group of $('.group')){
+        if($(group).find('.horizontal.header').text().trim() != field){
+          $(group).hide()
+        }
+      }
+    }
+  }
 </script>
 
 </html>

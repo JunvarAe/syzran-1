@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
-    <link
-        href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css"
-        rel="stylesheet" type="text/css" />
     <script
         src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hotel.css">
     <title>Сызрань</title>
@@ -63,34 +60,22 @@
                 <div class="ui dropdown">
                     <div class="default text">Звездность</div>
                     <i class="dropdown icon"></i>
-          
-                    <div class="menu">
-                      <div class="item"><i class="icon star"></i><i class="icon star"></i></div>
-                      <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i></div>
-                      <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i></div>
-                      <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i></div>
-                    </div>
-                  </div>
 
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui calendar" id="rangestart">
-                            <div class="ui input left icon">
-                                <i class="calendar icon"></i>
-                                <input type="text" placeholder="Start">
-                            </div>
+                    <div class="menu">
+                        <div class="default item">Звездность</div>
+                        <div class="item"><i class="icon star"></i><i class="icon star"></i></div>
+                        <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui calendar" id="rangeend">
-                            <div class="ui input left icon">
-                                <i class="calendar icon"></i>
-                                <input type="text" placeholder="End">
-                            </div>
-                        </div>
+                        <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i
+                                class="icon star"></i></div>
+                        <div class="item"><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i
+                                class="icon star"></i><i class="icon star"></i></div>
                     </div>
                 </div>
-                <button class="ui button active">Применить</button>
+
+                <div class="ui labeled small range slider" id="slider-range"></div>
+                <button class="ui button active" onclick="filter()">Применить</button>
+                <a onclick="filterReset()">сбросить фильтр</a>
             </div>
 
         </div>
@@ -105,11 +90,15 @@
                         <div class="content">
                             <div class="header">Отель "Сызрань" <i class="star icon"></i><i class="star icon"></i></div>
                             <div class="score">4.8</div>
-                            <div class="meta"> 
+                            <div class="meta">
                                 <span class="price">Цена от 2000 руб за ночь </span>
                             </div>
                             <div class="description">
-                                <p>Отель «Сызрань» расположен в городе Сызрань. Стойка регистрации работает круглосуточно. Гости могут заказать трансфер от/до аэропорта и доставку еды и напитков в номер. Всё отлично. Отдельная благодарность администратору Екатерине. Встретили, накормили, очень было приятно остановиться у вас, хоть и на короткий срок.</p>
+                                <p>Отель «Сызрань» расположен в городе Сызрань. Стойка регистрации работает
+                                    круглосуточно. Гости могут заказать трансфер от/до аэропорта и доставку еды и
+                                    напитков в номер. Всё отлично. Отдельная благодарность администратору Екатерине.
+                                    Встретили, накормили, очень было приятно остановиться у вас, хоть и на короткий
+                                    срок.</p>
                             </div>
                             <div class="extra">
                                 <p>
@@ -119,7 +108,7 @@
                                 <div class="ui label">Бесплатная парковка</div>
                                 <div class="ui label">Бесплатный Wi-Fi</div>
                                 <div class="ui right floated primary button">
-                                   Подробнее
+                                    Подробнее
                                     <i class="right chevron icon"></i>
                                 </div>
                             </div>
@@ -164,7 +153,8 @@
                             <img src="assets/hotel/3.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">Каскад <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                            <div class="header">Каскад <i class="star icon"></i><i class="star icon"></i><i
+                                    class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
                             <div class="score">5.0</div>
                             <div class="meta">
                                 <span class="price">Цена от 2000 руб за ночь</span>
@@ -197,7 +187,8 @@
                             <img src="assets/hotel/4.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">Apriori <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                            <div class="header">Apriori <i class="star icon"></i><i class="star icon"></i><i
+                                    class="star icon"></i></div>
                             <div class="score">4.9</div>
                             <div class="meta">
                                 <span class="price">Цена от 2000 руб за ночь</span>
@@ -215,7 +206,7 @@
                                 <div class="ui label">Можно с питомцами</div>
                                 <div class="ui label">Бесплатный Wi-Fi</div>
                                 <div class="ui right floated primary button">
-                                   Подробнее
+                                    Подробнее
                                     <i class="right chevron icon"></i>
                                 </div>
                             </div>
@@ -226,7 +217,8 @@
                             <img src="assets/hotel/5.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">U Kremlya <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div> 
+                            <div class="header">U Kremlya <i class="star icon"></i><i class="star icon"></i><i
+                                    class="star icon"></i></div>
                             <div class="score">4.8</div>
                             <div class="meta">
                                 <span class="price">Цена от 2000 руб за ночь</span>
@@ -244,7 +236,7 @@
                                 <div class="ui label">Бесплатный Wi-Fi</div>
                                 <div class="ui label">Бар</div>
                                 <div class="ui right floated primary button">
-                                   Подробнее
+                                    Подробнее
                                     <i class="right chevron icon"></i>
                                 </div>
                             </div>
@@ -255,7 +247,8 @@
                             <img src="assets/hotel/7.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">Юбилейная <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                            <div class="header">Юбилейная <i class="star icon"></i><i class="star icon"></i><i
+                                    class="star icon"></i></div>
                             <div class="score">4.7</div>
                             <div class="meta">
                                 <span class="price">Цена от 2000 руб за ночь</span>
@@ -273,7 +266,7 @@
                                 <div class="ui label">Бесплатный Wi-Fi</div>
                                 <div class="ui label">Бар</div>
                                 <div class="ui right floated primary button">
-                                   Подробнее
+                                    Подробнее
                                     <i class="right chevron icon"></i>
                                 </div>
                             </div>
@@ -302,7 +295,7 @@
                                 <div class="ui label">Бесплатный Wi-Fi</div>
                                 <div class="ui label">Бар</div>
                                 <div class="ui right floated primary button">
-                                   Подробнее
+                                    Подробнее
                                     <i class="right chevron icon"></i>
                                 </div>
                             </div>
@@ -342,7 +335,7 @@
     </footer>
 </body>
 <script>
-   var item = 0
+    var item = 0
     var mass = [{ cap: "Крепость на Волге", des: "Сызранцы гордо именуют свой город «Петровский город с кремлем». И не лукавят: крепость на Волге была основана воеводой Григорием Козловским по одному из самых ранних указов Петра Алексеевича аж в 1683 году.Город расположен на правом берегу Волги, в том месте, где в неё впадает река Сызранка. Именно отсюда, по одной из версий, есть пошло название города («сызран» – от татарского «сыза» — «овраг»)." },
     { cap: "Сызранская Железная дорога ", des: "Сызрань - крупнейший железно-дорожный узел Поволжья. Станция эта появилась в 1874 году, когда сюда через Пензу, была построена Моршанско- Сызранская железная дорога, а уже в 1880 году свершилось историческое событие - железная дорога шагнула за Волгу, по крупнейшему на то время 13-ти пролетному Александровскому мосту, связав Сызрань с Самарой и Уфой." },
     { cap: "Сызранский фестиваль ", des: "Сы́зранский помидо́р — региональный праздник-фестиваль, посвящённый помидору, произрастающему в Сызрани. Фестиваль проводят с 2001 года." }
@@ -382,8 +375,8 @@
         startCalendar: $('#rangestart')
     });
 
-    function toggle(){
-        if($('.toggle').hasClass('close')){
+    function toggle() {
+        if ($('.toggle').hasClass('close')) {
             $('.toggle').removeClass('close')
             $('.head_menu').removeClass('view')
         } else {
@@ -392,9 +385,62 @@
         }
     }
 
-    function filter(){
+    var start_rating = 1
+    var end_rating = 5
+    $('.ui.range.slider')
+        .slider({
+            min: 0,
+            max: 5,
+            step: 0.2,
+            onChange: function (range, firstVal, secondVal) {
+                start_rating = firstVal
+                end_rating = secondVal
+            }
+        });
 
+    function filterReset() {
+        $('.items .item').show()
+        $('.form .dropdown .text').addClass('default').text('Звездность')
+        $('.form .input input').val('')
+        $('.ui.range.slider')
+            .slider({
+                min: 0,
+                max: 5,
+                step: 0.2,
+                onChange: function (range, firstVal, secondVal) {
+                    start_rating = firstVal
+                    end_rating = secondVal
+                }
+            });
     }
+
+    function filter() {
+
+        var text = $('.form .input input').val()
+        var stars = $('.form .dropdown .text .star').length
+        $('.items .item').show()
+        var items = $('.items .item')
+        for (var item of items) {
+            if (text.trim().length > 0) {
+                if (!$(item).text().includes(text)) {
+                    $(item).hide()
+                }
+            }
+            if (stars > 0) {
+                if ($(item).find('.star').length != stars) {
+                    $(item).hide()
+                }
+            }
+            if (+$(item).find('.score').text() < start_rating) {
+                $(item).hide()
+            }
+            if (+$(item).find('.score').text() > end_rating) {
+                $(item).hide()
+            }
+        }
+    }
+
+
 </script>
 
 </html>
